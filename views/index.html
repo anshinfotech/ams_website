@@ -1,28 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - Asrith Management System</title>
-    <link rel="stylesheet" href="../public/CSS/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The November Room</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+  <link rel="stylesheet" href="../public/CSS/index.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body>
 
-    <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <div class="logo">
-            <a href="#">YourLogo</a>
+<body>
+  <div id="wrapper">
+
+
+    <nav class="flex justify-between items-center px-5 py-4 absolute w-full z-10 bg-transparent">
+      <!-- Mobile Menu Button -->
+      <div class="flex md:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Logo -->
+      <a href="" class="text-white text-3xl uppercase font-bold">CoderClas</a>
+      
+      <!-- Social Icons (Hidden on mobile, visible on medium and above) -->
+      <ul class="hidden md:flex">
+        <li>
+          <a href=""><i class="fab fa-facebook text-orange-500 text-2xl px-2 mx-1"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-twitter text-orange-500 text-2xl px-2 mx-1"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-linkedin text-orange-500 text-2xl px-2 mx-1"></i></a>
+        </li>
+      </ul>
+    </nav>
+    
+    
+
+
+    <div class="hero h-screen bg-top bg-cover relative flex justify-center items-center ">
+      <div class="absolute w-full h-screen bg-black opacity-75"></div>
+      <div class="relative text-white w-1/2 md:text-center m">
+        <h2 class=" text-2xl  md:text-3xl mb-0 md:text-5xl font-semibold md:mb-2" data-aos="fade-down"
+          data-aos-duration="1000">
+          Coding Career <span class="text-orange-500">Turbocharged in Minutes!|</span>
+        </h2>
+        <p class="md:text-lg text-gray-300 mb-2 font-xl">
+          Unlock Your Coding Potential: Budget-friendly Courses, Interactive Content, Expert Instructors, Real Projects
+          & Assignments!
+        </p>
+        <a href=""
+          class=" text-sm  border px-4 py-5 inline-block rounded border-orange-500 text-blue-500 hover:bg-orange-500 hover:text-white"
+          data-aos="flip-right" data-aos-duration="1000">Explore Courses</a>
+      </div>
+    </div>
+
+    <!-- :::::::::::::::::COURSES::::::::::::::::::::::::::: -->
+    <div class="box">
+      <div class="courses py-12 px-5 bg-gray-100 text-center">
+        <div class="content mb-8">
+          <h1 class="text-4xl font-bold mb-4 text-gray-800">Courses to get you started</h1>
+          <p class="text-lg text-gray-600">Explore courses from experienced, real-world experts.</p>
+        </div>
+    
+        <div class="flex flex-wrap justify-center gap-5">
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPJWNBc-iCOYTr5v1ddpFLIg2N9x-XwN2PQ&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">90$</p>
           </div>
-          <!-- Navigation Links -->
-          <div class="nav-links">
-            <a href="#">Course</a>
-            <a href="#">Contact</a>
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPJWNBc-iCOYTr5v1ddpFLIg2N9x-XwN2PQ&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">90$</p>
+          </div>
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPJWNBc-iCOYTr5v1ddpFLIg2N9x-XwN2PQ&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">90$</p>
+          </div>
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPJWNBc-iCOYTr5v1ddpFLIg2N9x-XwN2PQ&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">90$</p>
+          </div>
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPJWNBc-iCOYTr5v1ddpFLIg2N9x-XwN2PQ&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">90$</p>
+          </div>
+    
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYYybd35R3GigoqZQhTUWrDLc2bUyL9TaYw&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">199$</p>
+          </div>
+    
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYYybd35R3GigoqZQhTUWrDLc2bUyL9TaYw&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">199$</p>
+          </div>
+    
+          <div
+            class="course bg-white shadow-lg rounded-lg p-5 text-left transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-2 hover:shadow-xl w-72">
+            <img class="w-full rounded-lg mb-4"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYYybd35R3GigoqZQhTUWrDLc2bUyL9TaYw&s" alt="">
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Complete 2024 Web Development Bootcamp</h4>
+            <p class="text-gray-600 text-base">
+              <span>4.7</span>
+              <span class="text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="text-gray-600">Dr. Atulranjan @bbsbec</p>
+            <p class="font-bold text-red-500">199$</p>
           </div>
         </div>
-      </nav>
-      
-</div>
+      </div>
+    </div>
+    
+
+
+
+    <!-- ::::::::::::::::::::::::::MEET OUR TRAINERS:::::::::::::::::::::::::: -->
+
+    <div class="trainer` md:flex-row items-center">
+      <div class="m-auto text-center w-full md:w-6/12">
+        <h3 class="font-bold text-xl md:text-3xl">MEET OUR TRAINERS</h3>
+        <p class="text-base md:text-lg text-gray-700">Our trainers are here to dedicate the time and effort that you
+          need to get in the best shape of your life</p>
+      </div>
+      <div class="image-box flex flex-col md:flex-row items-center mt-6 md:mt-10">
+        <div class="image px-3 md:px-6 w-full md:w-1/3">
+          <img class="w-full" src="image/asset 3.jpeg" alt="">
+          <h4 class="text-center font-semibold text-base md:text-lg">Mr Rogers</h4>
+          <p class="text-center text-xs md:text-sm">NEIGHBORHOOD WATCHMAN</p>
+        </div>
+        <div class="image px-3 md:px-6 w-full md:w-1/3 mt-4 md:mt-0">
+          <img class="w-full" src="image/asset 1.jpeg" alt="">
+          <h4 class="text-center font-semibold text-base md:text-lg">Mr Rogers</h4>
+          <p class="text-center text-xs md:text-sm">NEIGHBORHOOD WATCHMAN</p>
+        </div>
+        <div class="image px-4 md:px-6 w-full md:w-1/3 mt-4 md:mt-0">
+          <img class="w-full" src="image/asset 2.jpeg" alt="">
+          <h4 class="text-center font-semibold text-base md:text-lg">Mr Rogers</h4>
+          <p class="text-center text-xs md:text-sm">NEIGHBORHOOD WATCHMAN</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- :::::::::::::::CONTACT US:::::::::::::::::: -->
+    <div class="bg-black text-white flex text-center justify-center flex-col mt-5">
+      <div class="flex items-center flex-col m-auto justify-center w-8/12"> <!-- Adjust width for display change -->
+        <h3 class="font-bold text-4xl">Contact Us</h3> <!-- Increase font size for header -->
+        <p class="text-lg">Contact us to ask any questions, acquire a membership, talk to our trainers or
+          anything else</p>
+      </div>
+
+      <div class="flex-auto p-5 lg:p-10 bg-orange-600 text-white rounded w-3/5 m-auto mt-5">
+        <!-- Adjust width for display change -->
+        <h4 class="text-3xl font-semibold">Want to work with us?</h4> <!-- Increase font size for subheader -->
+        <p class="leading-relaxed mt-1 mb-4">
+          Complete this form and we will get back to you in 24 hours.
+        </p>
+
+        <div class="relative w-full mb-3">
+          <label class="block uppercase text-sm font-bold mb-2" for="email">Email</label><input type="email"
+            class="px-4 py-3 placeholder-gray-400 bg-white rounded text-base shadow focus:outline-none focus:shadow-outline w-full">
+          <!-- Increase font size and adjust padding -->
+        </div>
+        <div class="relative w-full mb-3">
+          <label class="block uppercase text-sm font-bold mb-2" for="message">Message</label><textarea rows="4"
+            cols="80"
+            class="px-4 py-3 placeholder-gray-400 bg-white rounded text-base shadow focus:outline-none focus:shadow-outline w-full"></textarea>
+          <!-- Increase font size and adjust padding -->
+        </div>
+        <div class="text-center mt-6">
+          <button
+            class="bg-gray-900 text-white active:bg-gray-700 text-base font-bold uppercase px-8 py-4 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+            <!-- Increase font size and adjust padding -->
+            type="button">
+            Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ::::::::::::::::::::::::::::::::::::::::Follow us on Social Media::::::::::::::::::::::::::::::::::::::::: -->
+    <div class="p-10 ml-10">
+      <div>
+        <h1 class="font-bold text-2xl ">Follow us on Social Media</h1>
+        <p class="text-red-800">Find us on any of these platforms, we respond 1-2 business days.</p>
+      </div>
+      <div class="text-4xl flex gap-5">
+        <div class=""><a href="https://www.instagram.com/ravan__73240/"><i class="fa-brands fa-instagram"></i></a></div>
+        <div class=""><a href="https://www.instagram.com/ravan__73240/"><i class="fa-brands fa-facebook"></i></a></div>
+        <div><a href="https://www.instagram.com/ravan__73240/"><i class="fa-brands fa-twitter"></i></a></div>
+      </div>
+
+    </div>
+
+    <div class="border-2 black">
+      <h1 class="text-center font-extrabold">ATUL RANJAN</h1>
+      <p class="text-center text-black font-bold">atulranjan164@gmail.com</p>
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
