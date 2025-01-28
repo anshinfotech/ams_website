@@ -20,6 +20,14 @@ html {
 body {
     line-height: 1.6;
 }
+.devideline{
+    width: 90vw;
+    height: 2px;
+    background-color: #fff;
+    margin: auto;
+    color: white;
+}
+
 
 /* Navbar Styles */
 .navbar {
@@ -32,7 +40,6 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
 }
 
 .logo h1 {
@@ -45,7 +52,7 @@ body {
     color: white;
     margin-left: 2rem;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.6s;
 }
 
 .nav-links a:hover {
@@ -65,15 +72,15 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--text-color);
+    background: white;
     margin: 2px 0;
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* <!-- Home Section --> */
 #home {
     padding: 8rem 5% 4rem;
-    background: linear-gradient(135deg, #030303 0%, #1e2123 100%);
+    background: linear-gradient(135deg, #030303 0%, #100d12 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -109,6 +116,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    margin:auto;
+
 }
 
 .cta-button:hover {
@@ -118,7 +127,7 @@ body {
 /* Courses Section */
 #courses {
     padding: 4rem 5%;
-    background-color: black;
+    background: linear-gradient(135deg, #030303 0%, #100d12 100%);
     color: wheat;
 }
 
@@ -138,7 +147,7 @@ body {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 8px 12px rgba(255, 255, 255, 0.93);
     transition: transform 0.3s;
     border: 1px solid #e5e7eb;
 }
@@ -156,6 +165,7 @@ body {
 
 .course-content {
     padding: 1.5rem;
+    text-align: center;
 }
 
 .course-title {
@@ -194,7 +204,7 @@ body {
 /* Team Section */
 #team {
     padding: 4rem 5%;
-   background-color: black;
+    background: linear-gradient(135deg, #030303 0%, #100d12 100%);
    color: white;
 }
 
@@ -250,7 +260,7 @@ body {
 
 /* Footer */
 footer {
-    background: #1f2937;
+    background: linear-gradient(135deg, #030303 0%, #100d12 100%);
     color: white;
     padding: 4rem 5% 2rem;
 }

@@ -1,6 +1,6 @@
 // API Endpoints
 const CORS_PROXY = "https://api.allorigins.win/raw?url=";
-const API = {
+const API  = {
   createCourse: `${CORS_PROXY}${encodeURIComponent(
     "https://amsbackendlive.onrender.com/api/v1/course/Create"
   )}`,
