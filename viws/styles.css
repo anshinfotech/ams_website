@@ -583,7 +583,7 @@ footer .bottom {
   }
 
   .subTop1 img {
-    width: 100px;
+    width: 200px;
   }
 
   .subTop1 {
@@ -626,6 +626,7 @@ footer .bottom {
     flex-direction: column;
   }
 
+
   .address .location {
     gap: 5px;
   }
@@ -649,6 +650,9 @@ footer .bottom {
 @media screen and (max-width: 426px) {
   footer {
     padding: 3rem;
+  }
+  .subTop2 img{
+width: 30px; 
   }
 
   .subTop2 .menu {
