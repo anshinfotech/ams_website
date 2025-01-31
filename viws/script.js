@@ -3,7 +3,14 @@ const API_URL = `${CORS_PROXY}${encodeURIComponent(
   "https://amsbackendlive.onrender.com/api/v1/course/getAllCourse"
 )}`;
 
+const API_TESTIMONIAL_URL= `${CORS_PROXY}${encodeURIComponent(
+ 
+"https://amsbackendlive.onrender.com/api/v1/testimonials/getAllTestimonials"
+)}`;
+
+
 console.log(API_URL);
+
 
 
 // DOM Elements
@@ -79,4 +86,62 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Initialize the application
 document.addEventListener("DOMContentLoaded", fetchCourses);
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const teamContainer = document.getElementById('team_inner');
+
+  // Fetch data from the backend
+  fetch(API_TESTIMONIAL_URL)
+    .then(response => response.json())
+    .then(teamMember => {
+      teamMember.data.forEach((team, index) => {
+        // Create a card for each team member
+        const teamCard = document.createElement('div');
+        teamCard.classList.add('carousel-item');
+        if (index === 0) {
+          teamCard.classList.add('active'); // Make the first item active
+        }
+        const starsHTML = generateStars(team.rating);
+        teamCard.innerHTML = `
+         <div class="boxx" class="d-block w-100">
+           
+        <div class="pic">
+          ${team.image ? `<img src="${team.image}" alt="${team.name}">` : ''}
+        </div>
+        <div class="boxx2">
+        <div class="text">
+            ${team.name}</div>
+        <div class="text2">${team.role}</div>
+        <div class="stars">
+                ${starsHTML}
+        </div>
+         <div class="para"> ${team.description}</div>
+        </div>
+       
+        </div>
+        `;
+
+        teamContainer.appendChild(teamCard);
+      });
+    })
+    .catch(error => {
+      teamContainer.innerHTML = '<p>Failed to load team data. Please try again later.</p>';
+      console.error('Error fetching team data:', error);
+    });
+});
+
+function generateStars(rating) {
+  const totalStars = 5; // Total number of stars (fixed at 5)
+  let starsHTML = '';
+
+  // Generate filled stars and empty stars based on the rating
+  for (let i = 1; i <= totalStars; i++) {
+      starsHTML += `<div class="star ${i <= rating ? 'filled' : 'empty'}"></div>`;
+  }
+
+  return starsHTML;
+}
 
