@@ -17,6 +17,7 @@ body {
   color: white;
   background: linear-gradient(135deg, #000000 0%, #1a0f90 100%);
 }
+
 .devideline {
   width: 90vw;
   height: 2px;
@@ -39,10 +40,11 @@ body {
 }
 
 .logo h1 {
-  margin-left:20px;
+  margin-left: 20px;
   color: tomato;
   font-size: 1.8rem;
 }
+
 .nav-links {
   margin-right: 4rem;
 }
@@ -57,7 +59,7 @@ body {
 }
 
 .nav-links a:hover {
-  color:tomato;
+  color: tomato;
 }
 
 .nav-links a.active {
@@ -93,8 +95,9 @@ body {
 .hero-left {
   text-align: center;
   width: 45%;
- 
+
 }
+
 .hero-right {
   width: 45%;
 
@@ -107,6 +110,7 @@ body {
   margin-bottom: 1.5rem;
   color: white;
 }
+
 .hero h1 span {
   color: tomato;
 }
@@ -116,7 +120,8 @@ body {
   margin-bottom: 2rem;
   color: #4b5563;
 }
-#home button{
+
+#home button {
   margin-top: 5%;
 }
 
@@ -131,8 +136,9 @@ body {
   transition: background 0.3s;
   margin: auto;
 }
+
 .cta-button button i {
-margin-left: 10px;
+  margin-left: 10px;
 }
 
 .cta-button:hover {
@@ -177,11 +183,12 @@ margin-left: 10px;
 
 @media (max-width: 768px) {
   #counter {
-      flex-direction: column;
-      padding: 30px;
+    flex-direction: column;
+    padding: 30px;
   }
+
   #counter div {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -190,16 +197,18 @@ margin-left: 10px;
 #courses {
   padding: 4rem 5%;
   background: linear-gradient(135deg, #000000 0%, #1a0f90 100%);
-  color: #f5f5f5; /* Light text for better contrast */
+  color: #f5f5f5;
+  /* Light text for better contrast */
 }
 
 #courses h2 {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.5rem;
-color: tomato;
+  color: tomato;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
 }
 
 .courses-grid {
@@ -246,11 +255,13 @@ color: tomato;
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #6c63ff; /* Vibrant purple for titles */
+  color: #6c63ff;
+  /* Vibrant purple for titles */
 }
 
 .course-description {
-  color: #4b5563; /* Dark gray for readability */
+  color: #4b5563;
+  /* Dark gray for readability */
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -262,19 +273,22 @@ color: tomato;
 
 .course-details p {
   margin: 0.5rem 0;
-  color: #6b7280; /* Medium gray for details */
+  color: #6b7280;
+  /* Medium gray for details */
   font-size: 0.9rem;
 }
 
 .course-price {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #1f2937; /* Dark gray for price */
+  color: #1f2937;
+  /* Dark gray for price */
   margin-top: 1rem;
 }
 
 .discount {
-  color: #ff4757; /* Bright red for discounts */
+  color: #ff4757;
+  /* Bright red for discounts */
   font-size: 0.9rem;
   margin-left: 0.5rem;
   font-weight: 600;
@@ -298,6 +312,7 @@ color: tomato;
     grid-template-columns: 1fr;
   }
 }
+
 /* Team Section */
 #team {
   padding: 4rem 5%;
@@ -305,102 +320,112 @@ color: tomato;
   color: white;
 }
 
-.carousel-inner{
-    width: 80%;
-    margin-top: 40px;
+.carousel-inner {
+  width: 80%;
+  margin-top: 40px;
 }
 
 .boxx {
-    /* margin-top: 23px; */
-    width: 70%;
-    margin: auto;
-    height: 300px;
-    
-    border: 1px;
-   
-    background: #efe6e6;
-    box-shadow: 0px 0px 10px 5px gray;
-    display: flex;
+  /* margin-top: 23px; */
+  width: 70%;
+  margin: auto;
+  height: 300px;
+
+  border: 1px;
+
+  background: #efe6e6;
+  box-shadow: 0px 0px 10px 5px gray;
+  display: flex;
 }
 
 .pic {
-    border: 1px solid black;
-    width: 17%;
-    height: 130px;
-    margin-left: -68px;
-    border: 8px solid beige;
-    border-radius: 15px;
-    margin-top: 25px;
+  border: 1px solid black;
+  width: 17%;
+  height: 130px;
+  margin-left: -68px;
+  border: 8px solid beige;
+  border-radius: 15px;
+  margin-top: 25px;
 
 }
-.pic img{
-    width: 100%;
-    height: 100%;
+
+.pic img {
+  width: 100%;
+  height: 100%;
 }
-.boxx2{
-   
-    margin-left: 10px ;
-    margin-top: 13px;
-    width: 80%;
-    
+
+.boxx2 {
+
+  margin-left: 10px;
+  margin-top: 13px;
+  width: 80%;
+
 
 }
+
 .text {
-    
-    /* float: left; */
-   color: black;
-    margin-top: 12px;
-    margin-left: 12px;
-    font-size: 26px;
-    font-family: sans-serif;
+
+  /* float: left; */
+  color: black;
+  margin-top: 12px;
+  margin-left: 12px;
+  font-size: 26px;
+  font-family: sans-serif;
 }
+
 .text2 {
-   
-    /* float: left; */
-  
-    margin-top: 4px;
-    margin-left:12px;
-    font-size: 19px;
-    font-family: sans-serif;
-   
-    color: gray;
+
+  /* float: left; */
+
+  margin-top: 4px;
+  margin-left: 12px;
+  font-size: 19px;
+  font-family: sans-serif;
+
+  color: gray;
 }
+
 .stars {
-    width: 40%;height: 30px;
-    margin: 12px;
-    
+  width: 40%;
+  height: 30px;
+  margin: 12px;
+
 }
 
 
 .star {
-    background-repeat: no-repeat;
-    float: left;
-   
-    background-size: contain;
-    width: 8%;
-    height: 25px;
-   
-   
+  background-repeat: no-repeat;
+  float: left;
 
-    margin-top: 1px;
+  background-size: contain;
+  width: 8%;
+  height: 25px;
+
+
+
+  margin-top: 1px;
 }
+
 .star.filled {
-    background-image: url("../pics/star\ \(1\).png"); /* Replace with your filled star image */
-  }
-  
-  .star.empty {
-    background-image: url('../pics/favorite.png'); /* Replace with your empty star image */
-  }
+  background-image: url("../pics/star\ \(1\).png");
+  /* Replace with your filled star image */
+}
+
+.star.empty {
+  background-image: url('../pics/favorite.png');
+  /* Replace with your empty star image */
+}
+
 .para {
-    width: 80%;
-    color: #364d59;
-    height: 126px;
-    float: left;
-    margin: 1px;
-   margin-left: 8px;
-    padding: 3px;
-    font-size: 20px;
-    font-family: sans-serif;
+  width: 80%;
+  color: #364d59;
+  height: 126px;
+  float: left;
+  margin: 1px;
+  margin-left: 8px;
+  padding: 3px;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 
@@ -418,86 +443,226 @@ color: tomato;
 }
 
 /* Footer */
+/* General Styles */
 footer {
-  background: linear-gradient(135deg, #030303 0%, #100d12 100%);
-  color: white;
-  padding: 4rem 5% 2rem;
+  background-color: #010101;
+  padding: 3rem 6rem;
+  font-family: "EB Garamond", serif;
+  color: #ecf0f1; /* Light gray text for readability */
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+footer a {
+  text-decoration: none; /* Remove underline from links */
+  color: #d1a272; /* Golden brown for links */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Add underline on hover for better interaction */
+}
+
+/* Top Section */
+footer .top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #34495e; /* Slightly lighter border for contrast */
+}
+
+.subTop1 {
+  width: 25%;
+  margin-left: 0.5rem;
+}
+
+.subTop1 img {
+  width: 241px;
+  height: auto;
+}
+
+.subTop2 {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.subTop2 .menu {
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 2rem;
 }
 
-.footer-section h3 {
-  margin-bottom: 1rem;
+.menu li .same {
+  font-size: 20px;
+  font-weight: 500;
+  color: #d1a272; /* Golden brown for menu links */
 }
 
-.footer-section ul {
-  list-style: none;
+.subTop2 .address {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.footer-section ul li {
-  margin-bottom: 0.5rem;
+.address1 p {
+  margin-bottom: 10px;
+  color: #ecf0f1; /* Light gray text for readability */
 }
 
-.footer-section a {
-  color: white;
-  text-decoration: none;
+.address1Head {
+  color: #d1a272; /* Golden brown for headings */
+  font-weight: 700;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid #374151;
+.address .location {
+  display: flex;
+  gap: 20px;
+}
+
+.locationIcon {
+  width: 22px;
+  height: 28px;
+}
+
+.subTop2 .contact div {
+  display: flex;
+  gap: 20px;
+}
+
+.contact .number {
+  margin-bottom: 15px;
+  color: #ecf0f1; /* Light gray text for readability */
+}
+
+/* Bottom Section */
+footer .bottom {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom .subBottom1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bottom .subBottom1 p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  color: #ecf0f1; /* Light gray text for readability */
+}
+
+.bottom .subBottom2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.disclaimer,
+.privacy-policy {
+  color: #d1a272; /* Golden brown for links */
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+@media screen and (max-width: 1106px) {
+  footer {
+    padding: 3rem 4rem;
   }
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  footer p {
+    font-size: 14px;
   }
 
-  .nav-links.active {
+  footer .top {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+
+  .subTop1 img {
+    width: 100px;
+  }
+
+  .subTop1 {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .subTop2 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .subTop2 .menu {
+    gap: 1.5rem;
+  }
+
+  .menu li .same {
+    font-size: 16px;
+  }
+
+  .subTop2 .address {
+    width: 100%;
+  }
+
+  footer .bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .bottom .subBottom1 p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .address {
     flex-direction: column;
   }
 
-  .nav-links a {
-    margin: 0.5rem 0;
+  .address .location {
+    gap: 5px;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  .locationIcon {
+    width: 28px;
+    padding-right: 15px;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .bottom .subBottom1 {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .bottom .subBottom1 p {
+    color: #ecf0f1; /* Light gray text for readability */
+    font-weight: 300;
   }
 }
 
-.course-card {
-  animation: fadeIn 0.5s ease-out;
+@media screen and (max-width: 426px) {
+  footer {
+    padding: 3rem;
+  }
+
+  .subTop2 .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subTop2 .address {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subTop2 .contact {
+    align-items: center;
+  }
 }
