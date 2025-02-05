@@ -15,10 +15,16 @@ const navLinks = document.querySelector(".nav-links");
 const coursesContainer = document.getElementById("courses-container");
 
 // Toggle Mobile Menu
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  hamburger.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
 });
+
 
 // Close mobile menu when clicking a link
 document.querySelectorAll(".nav-links a").forEach((link) => {
