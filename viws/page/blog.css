@@ -1,0 +1,45 @@
+/* Blog Section */
+.blog {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blogImage img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.blogTextAll {
+    padding: 20px;
+}
+
+.blogHead h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.blogPostMeta {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.blogText {
+    line-height: 1.6;
+}
+
+/* Other Blogs */
+.home-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.home-article img {
+    width: 100%;
+    border-radius: 5px;
+}
