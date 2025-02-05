@@ -15,7 +15,7 @@ html {
 body {
   line-height: 1.6;
   color: white;
-  background: linear-gradient(135deg, #000000 0%, #1a0f90 100%);
+ 
 }
 
 .devideline {
@@ -28,6 +28,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
+  background: linear-gradient(135deg, #000000 0%, #1a0f90 100%);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -80,6 +81,7 @@ body {
   transition: 0.3s;
   color: tomato;
 }
+
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -111,6 +113,7 @@ body {
   align-items: center;
   margin: 0 auto;
   gap: 5%;
+   background: linear-gradient(135deg, #000000 0%, #1a0f90 100%);
 }
 
 .hero-left {
@@ -294,12 +297,12 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
- 
+
   /* Vibrant purple for titles */
 }
 
 .course-description {
- 
+
   /* Dark gray for readability */
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -487,16 +490,20 @@ footer {
   background-color: #010101;
   padding: 3rem 6rem;
   font-family: "EB Garamond", serif;
-  color: #ecf0f1; /* Light gray text for readability */
+  color: #ecf0f1;
+  /* Light gray text for readability */
 }
 
 footer a {
-  text-decoration: none; /* Remove underline from links */
-  color: #d1a272; /* Golden brown for links */
+  text-decoration: none;
+  /* Remove underline from links */
+  color: #d1a272;
+  /* Golden brown for links */
 }
 
 footer a:hover {
-  text-decoration: underline; /* Add underline on hover for better interaction */
+  text-decoration: underline;
+  /* Add underline on hover for better interaction */
 }
 
 /* Top Section */
@@ -504,7 +511,8 @@ footer .top {
   display: flex;
   align-items: center;
   padding-bottom: 4rem;
-  border-bottom: 1px solid #34495e; /* Slightly lighter border for contrast */
+  border-bottom: 1px solid #34495e;
+  /* Slightly lighter border for contrast */
 }
 
 .subTop1 {
@@ -533,7 +541,8 @@ footer .top {
 .menu li .same {
   font-size: 20px;
   font-weight: 500;
-  color: #d1a272; /* Golden brown for menu links */
+  color: #d1a272;
+  /* Golden brown for menu links */
 }
 
 .subTop2 .address {
@@ -544,11 +553,13 @@ footer .top {
 
 .address1 p {
   margin-bottom: 10px;
-  color: #ecf0f1; /* Light gray text for readability */
+  color: #ecf0f1;
+  /* Light gray text for readability */
 }
 
 .address1Head {
-  color: #d1a272; /* Golden brown for headings */
+  color: #d1a272;
+  /* Golden brown for headings */
   font-weight: 700;
 }
 
@@ -569,7 +580,8 @@ footer .top {
 
 .contact .number {
   margin-bottom: 15px;
-  color: #ecf0f1; /* Light gray text for readability */
+  color: #ecf0f1;
+  /* Light gray text for readability */
 }
 
 /* Bottom Section */
@@ -591,7 +603,8 @@ footer .bottom {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.1;
-  color: #ecf0f1; /* Light gray text for readability */
+  color: #ecf0f1;
+  /* Light gray text for readability */
 }
 
 .bottom .subBottom2 {
@@ -602,7 +615,8 @@ footer .bottom {
 
 .disclaimer,
 .privacy-policy {
-  color: #d1a272; /* Golden brown for links */
+  color: #d1a272;
+  /* Golden brown for links */
 }
 
 /* Responsive Design */
@@ -681,7 +695,8 @@ footer .bottom {
   }
 
   .bottom .subBottom1 p {
-    color: #ecf0f1; /* Light gray text for readability */
+    color: #ecf0f1;
+    /* Light gray text for readability */
     font-weight: 300;
   }
 }
@@ -690,8 +705,9 @@ footer .bottom {
   footer {
     padding: 3rem;
   }
-  .subTop2 img{
-width: 30px; 
+
+  .subTop2 img {
+    width: 30px;
   }
 
   .subTop2 .menu {
@@ -738,9 +754,11 @@ body {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  background-color: purple; /* Purple background applied to each image */
+  background-color: purple;
+  /* Purple background applied to each image */
   object-fit: cover;
-  padding: 5px; /* Adds spacing around the image */
+  padding: 5px;
+  /* Adds spacing around the image */
   transition: transform 0.5s ease-in-out;
 }
 
@@ -749,3 +767,41 @@ body {
   transform: scale(1.2);
 }
 
+
+/* ::::::::::::About-courses::::::::::: */
+.About-courses {
+  position: relative;
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+  margin-top: 5% ;
+
+}
+
+.About-courses .left {
+  height: 100%;
+  width: 40%;
+  margin: auto;
+
+}
+.About-courses .left img {
+width: 544px;
+
+}
+
+.About-course .right {
+  width: 40%;
+  height: 100%;
+  margin: auto;
+
+}
+.About-course .right button{
+ width: 120px;
+ border: 2px solid rebeccapurple;
+ background-color: red;
+
+}
