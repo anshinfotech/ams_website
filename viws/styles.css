@@ -15,7 +15,7 @@ html {
 body {
   line-height: 1.6;
   color: white;
- 
+
 }
 
 .devideline {
@@ -113,7 +113,7 @@ body {
   align-items: center;
   margin: 0 auto;
   gap: 5%;
-   background: linear-gradient(135deg, #000000 0%, #1a0f90 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a0f90 100%);
 }
 
 .hero-left {
@@ -778,30 +778,86 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15%;
-  margin-top: 5% ;
-
+  margin-top: 5%;
+  padding: 20px 20px;
 }
 
 .About-courses .left {
+  box-shadow: 2px 3px 4px teal;
+  padding: 20px 20px;
   height: 100%;
   width: 40%;
   margin: auto;
-
 }
+
 .About-courses .left img {
-width: 544px;
-
+  width: 100%;
+  max-width: 544px;
+  height: auto;
 }
 
-.About-course .right {
+.About-courses .right {
+  box-shadow: 2px 3px 4px teal;
+  padding: 20px 20px;
   width: 40%;
   height: 100%;
   margin: auto;
-
 }
-.About-course .right button{
- width: 120px;
- border: 2px solid rebeccapurple;
- background-color: red;
 
+.right h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.right p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.course-detailss {
+  width: 70%;
+  display: flex;
+  gap: 15%;
+  justify-content: space-between;
+  /* Space between left and right sides */
+}
+
+
+
+.left-side p,
+.right-side p {
+  background-color: teal;
+  color: white;
+  width: 130px ;
+  height: 25px;
+  border-radius:15px ;
+  text-align: center;
+}
+
+.right button {
+  width: 150px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.right button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.right button:active {
+  background-color: #004080;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
