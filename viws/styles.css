@@ -783,7 +783,7 @@ body {
 }
 
 .About-courses .left {
-  box-shadow: 2px 3px 4px teal;
+
   padding: 20px 20px;
   height: 100%;
   width: 40%;
@@ -797,7 +797,7 @@ body {
 }
 
 .About-courses .right {
-  box-shadow: 2px 3px 4px teal;
+
   padding: 20px 20px;
   width: 40%;
   height: 100%;
@@ -828,8 +828,8 @@ body {
 
 .left-side p,
 .right-side p {
-  background-color: teal;
-  color: white;
+  background-color: rgb(230, 253, 253);
+  color: rgb(0, 0, 0);
   width: 130px ;
   height: 25px;
   border-radius:15px ;
