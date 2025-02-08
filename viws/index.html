@@ -11,6 +11,348 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #333;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      flex: 0 1 350px;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      color: #333;
+      margin: 0 0 10px 0;
+    }
+
+    .card-text {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .card-link {
+      display: inline-block;
+      text-decoration: none;
+      color: #2196F3;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .card-link:hover {
+      color: #1976D2;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        padding: 15px;
+      }
+      
+      .card {
+        flex: 0 1 calc(50% - 15px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        flex: 0 1 100%;
+      }
+    }
+
+    .course-section,
+    .team-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .course,
+    .team-member {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 15px;
+      flex: 1 1 calc(30% - 20px);
+      /* Responsive width */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .course:hover,
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .course img,
+    .team-member img {
+      max-width: 200px;
+      height: 39vh;
+      border-radius: 5px;
+    }
+
+    h3,
+    h4 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+
+      .course,
+      .team-member {
+        flex: 1 1 calc(45% - 20px);
+        /* Adjust for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .course,
+      .team-member {
+        flex: 1 1 100%;
+        /* Stack on extra small screens */
+      }
+    }
+
+    /* inquiry form */
+    .inquiry-main {
+      width: 100%;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .inquiry-main label.inquiry-label span {
+      color: #a2aabd;
+      font-size: 1.2em;
+      font-weight: 500;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: -1em;
+      transition: all 0.1s linear;
+    }
+
+    .inquiry-main input.inquiry-input:focus+label.inquiry-label span,
+    .inquiry-main input.inquiry-input+label.inquiry-label.show span {
+      border-radius: 4px;
+      color: #2088cd;
+      font-size: 1em;
+      padding: 0 .15em;
+      opacity: 1;
+      top: -4.2em;
+    }
+
+    .inquiry-main input.inquiry-input:focus::-webkit-input-placeholder {
+      color: red !important;
+      opacity: 0;
+
+    }
+
+    .inquiry-main input.inquiry-input {
+      color: #666;
+      font-size: 1em;
+      padding: .75em .5em .5em;
+      padding-bottom: 0;
+      width: 100%;
+      border: 0 !important;
+      border-bottom: 1px solid #ececec !important;
+      border-radius: 0 !important;
+      background-image: linear-gradient(#9FC2FA, #9FC2FA);
+      background-size: 0 2px, auto;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: all .2s ease-out !important;
+      outline: 0 !important;
+    }
+
+    .inquiry-main textarea.inquiry-textarea {
+      border: 0;
+      border-bottom: 1px solid #ececec !important;
+    }
+
+    .inquiry-main textarea.inquiry-textarea::-webkit-input-placeholder {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+
+    .inquiry-main .field {
+      margin-bottom: 1em;
+      position: relative;
+    }
+
+    .inquiry-main input.inquiry-input:hover {
+      background-size: 100% 2px, auto;
+    }
+
+    .inquiry-main input.inquiry-input {
+      width: 100% !important;
+      margin-bottom: 10px !important;
+    }
+
+    .inquiry-main input.inquiry-input:focus {
+      box-shadow: inset 0 -2px 0 #9FC2FA !important;
+      outline: 0 !important;
+      box-shadow: none;
+    }
+
+    .inquiry-main textarea.inquiry-textarea:focus {
+      box-shadow: inset 0 -2px 0 #9FC2FA !important;
+      border: 0;
+      outline: 0 !important;
+      box-shadow: none;
+    }
+
+    .inquiry-main input.inquiry-input[type=number]::-webkit-inner-spin-button,
+    .inquiry-main input.inquiry-input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+
+    .inquiry-main input.inquiry-input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .bg-layer {
+      background-image: linear-gradient(45deg, rgba(3, 6, 60, 0.97), rgb(34, 20, 106)), url(/files/bg-layer.jpg);
+      background-size: cover;
+    }
+
+    .br-left {
+      border-radius: 5% 0% 0% 5% / 5% 0% 0% 5%;
+    }
+
+    .br-right {
+      border-radius: 0% 5% 5% 0% / 0% 5% 5% 0%;
+    }
+
+    .inquiry-main .inquiry-label,
+    .inquiry-main .inquiry-label,
+    .inquiry-main textarea.inquiry-textarea {
+      width: 100%;
+    }
+
+    #inquiry,
+    .inquiry-main .inquiry-label,
+    .inquiry-main .inquiry-input {
+      position: relative;
+    }
+
+    .inquiry-main .inquiry-input,
+    .inquiry-main textarea.inquiry-textarea {
+      padding: 0.5em;
+      border: none;
+      font: 300 100%/1.2 Ubuntu, sans-serif;
+    }
+
+    .inquiry-main .inquiry-input[type="text"],
+    .inquiry-main .inquiry-input[type="email"],
+    .inquiry-main textarea.inquiry-textarea {
+      margin: 0 0 1em;
+      outline: none;
+    }
+
+    .inquiry-main .inquiry-input.invalid,
+    .inquiry-main textarea.inquiry-textarea.invalid {
+      border-color: #d5144d;
+    }
+
+    .inquiry-main .inquiry-label>span {
+      vertical-align: top;
+      display: inline-block;
+      padding: 0.5em;
+      border: 1px solid transparent;
+      text-align: right;
+    }
+
+    .inquiry-main .inquiry-input,
+    .inquiry-main textarea.inquiry-textarea {
+
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .inquiry-main input.inquiry-input:focus+label.inquiry-label span,
+      .inquiry-main input.inquiry-input+label.inquiry-label.show span {
+        top: -4.5em;
+      }
+
+      .inquiry-main {
+        width: auto;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      .br-left {
+        border-radius: 0;
+      }
+
+      .br-right {
+        border-radius: 0;
+      }
+
+      .inquiry-form-section .container-fluid .p-5 {
+        padding: 50px 0 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -141,8 +483,10 @@
 
   <!-- Courses Section -->
   <section id="courses">
-    <h2>Our Popular Courses</h2>
-    <div id='course-section' class="course-section"></div>
+    <h2 class="section-title">Our Courses</h2>
+    <div class="card-container" id="coursesContainer">
+      <!-- Course cards will be dynamically added here -->
+    </div>
   </section>
 
   <hr class="devideline">
@@ -150,8 +494,10 @@
   <!-- Team Section -->
 
   <section id="team">
-    <h2>Meet Our Expert Team</h2>
-    <div id='team-section' class="team-section"></div>
+    <h2 class="section-title">Our Team</h2>
+    <div class="card-container" id="teamContainer">
+      <!-- Team cards will be dynamically added here -->
+    </div>
   </section>
 
   <section class="mt-100 bg-layer inquiry-form-section">
@@ -269,6 +615,7 @@
 
 
 
+  <script src="api.jsx"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -282,7 +629,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="counter.js"></script>
-  <script src="api.jsx"></script>/
 </body>
 
 </html>

@@ -5,46 +5,84 @@ document.addEventListener('DOMContentLoaded', function () {
   fetch('https://amsbackendlive.onrender.com/api/v1/getallService')
     .then(response => response.json())
     .then(data => {
-      const courseSection = document.getElementById('course-section');
-      if (data.services && Array.isArray(data.services)) {
-        data.services.forEach(course => {
-          const courseDiv = document.createElement('div');
-          courseDiv.className = 'course fade-in';
-          courseDiv.innerHTML = `
-            <h3>${course.title}</h3>
-            <p>${course.description}</p>
-            <img src='${course.coverImage}' alt='${course.title} Cover Image'>
-          `;
-          courseSection.appendChild(courseDiv);
-          setTimeout(() => courseDiv.classList.add('visible'), 100);
-        });
-      } else {
-        console.error('Courses data is not an array:', data);
+      const coursesContainer = document.getElementById('coursesContainer');
+      if (!coursesContainer) {
+        console.error('Courses container not found');
+        return;
       }
+
+      // Access the services array from the response
+      const services = data.services;
+      if (!services || !Array.isArray(services)) {
+        console.error('Invalid courses data format:', data);
+        return;
+      }
+
+      services.forEach(course => {
+        if (!course) return;
+        
+        const card = document.createElement('div');
+        card.className = 'card fade-in';
+        card.innerHTML = `
+          <img src="${course.coverImage || 'https://placehold.co/600x400?text=Course+Image'}" alt="${course.title || 'Course'}" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">${course.title || 'Course Title'}</h3>
+            <p class="card-text">${course.description || 'No description available'}</p>
+            <a href="#" class="card-link">Read more</a>
+          </div>
+        `;
+        coursesContainer.appendChild(card);
+        setTimeout(() => card.classList.add('visible'), 100);
+      });
     })
-    .catch(error => console.error('Error fetching courses:', error));
+    .catch(error => {
+      console.error('Error fetching courses:', error);
+      const coursesContainer = document.getElementById('coursesContainer');
+      if (coursesContainer) {
+        coursesContainer.innerHTML = '<p>Error loading courses. Please try again later.</p>';
+      }
+    });
 
   // Fetch team members
   fetch('https://amsbackendlive.onrender.com/api/v1/team/getAllTeamMembers')
     .then(response => response.json())
     .then(data => {
-      const teamSection = document.getElementById('team-section');
-      if (data.teamMembers && Array.isArray(data.teamMembers)) {
-        data.teamMembers.forEach(member => {
-          const memberDiv = document.createElement('div');
-          memberDiv.className = 'team-member fade-in';
-          memberDiv.innerHTML = `
-            <img src='${member.coverImage}' alt='${member.name} Cover Image'>
-            <h4>${member.name}</h4>
-            <p>${member.designation}</p>
-            <p>Experience: ${member.yearOfExperience} years</p>
-          `;
-          teamSection.appendChild(memberDiv);
-          setTimeout(() => memberDiv.classList.add('visible'), 100);
-        });
-      } else {
-        console.error('Team members data is not an array:', data);
+      const teamContainer = document.getElementById('teamContainer');
+      if (!teamContainer) {
+        console.error('Team container not found');
+        return;
       }
+
+      // Access the teamMembers array from the response
+      const teamMembers = data.teamMembers;
+      if (!teamMembers || !Array.isArray(teamMembers)) {
+        console.error('Invalid team data format:', data);
+        return;
+      }
+
+      teamMembers.forEach(member => {
+        if (!member) return;
+
+        const card = document.createElement('div');
+        card.className = 'card fade-in';
+        card.innerHTML = `
+          <img src="${member.coverImage || 'https://placehold.co/600x400?text=Team+Member'}" alt="${member.name || 'Team Member'}" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">${member.name || 'Team Member'}</h3>
+            <h4 class="card-subtitle">${member.designation || 'Role'}</h4>
+            <p class="card-text">${member.yearOfExperience ? member.yearOfExperience + ' years of experience' : 'Experience information not available'}</p>
+          </div>
+        `;
+        teamContainer.appendChild(card);
+        setTimeout(() => card.classList.add('visible'), 100);
+      });
     })
-    .catch(error => console.error('Error fetching team members:', error));
+    .catch(error => {
+      console.error('Error fetching team members:', error);
+      const teamContainer = document.getElementById('teamContainer');
+      if (teamContainer) {
+        teamContainer.innerHTML = '<p>Error loading team members. Please try again later.</p>';
+      }
+    });
 });
+
